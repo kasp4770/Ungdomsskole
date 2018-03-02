@@ -2,7 +2,25 @@ import java.time.LocalDate;
 
 public abstract class Person {
 
-    public Person(){}
+    // private int rollNo;
+    private PersonType type;
+
+    public Person(){
+        PersonDAO.persons.add(this);
+        PersonDAO.rollNo ++;
+    }
+
+    public void setRole(PersonType type){
+        this.type = type;
+    }
+
+    public String getRole(){
+        return type.roleString();
+    }
+
+    public int getRollNo(){
+        return PersonDAO.rollNo;
+    }
 
     public abstract String getfName();
 

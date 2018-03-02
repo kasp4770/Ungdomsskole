@@ -21,6 +21,8 @@ public class Student extends Person{
         this.adress = adress;
         this.username = username;
         this.password = password;
+
+        setRole(PersonType.STUDENT);
     }
 
     public String getfName() {
