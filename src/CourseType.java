@@ -1,0 +1,3 @@
+public enum CourseType {
+    PARKOUR, SELFDEFENCE, CERAMICS, CRAFTING, CHINESE, FRENCH
+}
