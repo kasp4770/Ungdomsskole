@@ -2,12 +2,12 @@ import java.time.LocalDate;
 
 public abstract class Person {
 
-    // private int rollNo;
+    private int rollNo;
     private PersonType type;
 
     public Person(){
         PersonDAO.persons.add(this);
-        PersonDAO.rollNo ++;
+        PersonDAO.noOfUsers ++;
     }
 
     public void setRole(PersonType type){
@@ -18,8 +18,17 @@ public abstract class Person {
         return type.roleString();
     }
 
-    public int getRollNo(){
-        return PersonDAO.rollNo;
+    public int getNoOfUsers(){
+        return PersonDAO.noOfUsers;
+    }
+
+    public int getRollNo() {
+        /*int index = 0;
+        int i;
+        for(i = 0; i < PersonDAO.persons.size(); i++){
+            System.out.println(String.valueOf(index++)+": "+i);
+        }*/
+        return PersonDAO.persons.indexOf(this);
     }
 
     public abstract String getfName();

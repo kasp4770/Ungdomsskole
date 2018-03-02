@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class PersonDAO implements PersonDAOInterface {
 
     static ArrayList<Person> persons;
-    static int rollNo;
+    static int noOfUsers;
 
     public PersonDAO(){
         persons = new ArrayList<>();
-        rollNo = 0;
+        noOfUsers = 0;
     }
 
     @Override
@@ -23,5 +23,6 @@ public class PersonDAO implements PersonDAOInterface {
 
     public void deletePerson(Person person){
         persons.remove(person.getRollNo());
+        noOfUsers --;
     }
 }

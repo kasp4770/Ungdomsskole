@@ -8,16 +8,19 @@ public class Student extends Person{
     private LocalDate birthDate;
     private int phoneNo;
     private School school;
+    private SchoolGrade grade;
     private String adress;
     private String username;
     private String password;
 
-    public Student(String fName, String lName, LocalDate birthDate, int phoneNo, School school, String adress, String username, String password) {
+    public Student(/*int rollNo,*/ String fName, String lName, LocalDate birthDate, int phoneNo, School school, SchoolGrade grade, String adress, String username, String password) {
+        //setRollNo(rollNo);
         this.fName = fName;
         this.lName = lName;
         this.birthDate = birthDate;
         this.phoneNo = phoneNo;
         this.school = school;
+        this.grade = grade;
         this.adress = adress;
         this.username = username;
         this.password = password;
