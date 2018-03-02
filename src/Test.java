@@ -24,5 +24,7 @@ public class Test {
         System.out.println(List.getAllPersons().indexOf(person3));
 
         System.out.println(List.getPerson(1).getNoOfUsers());
+
+        System.out.println(List.getAllPersons());
     }
 }
