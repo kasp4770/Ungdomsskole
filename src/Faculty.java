@@ -1,30 +1,25 @@
 import java.time.LocalDate;
 
-public class Student extends Person{
-
+public class Faculty extends Person{
 
     private String fName;
     private String lName;
     private LocalDate birthDate;
     private int phoneNo;
-    private School school;
-    private SchoolGrade grade;
     private String adress;
     private String username;
     private String password;
 
-    public Student(String fName, String lName, LocalDate birthDate, int phoneNo, School school, SchoolGrade grade, String adress, String username, String password) {
+    public Faculty(String fName, String lName, LocalDate birthDate, int phoneNo, String adress, String username, String password) {
         this.fName = fName;
         this.lName = lName;
         this.birthDate = birthDate;
         this.phoneNo = phoneNo;
-        this.school = school;
-        this.grade = grade;
         this.adress = adress;
         this.username = username;
         this.password = password;
 
-        setRole(PersonType.STUDENT);
+        setRole(PersonType.FACULTY);
     }
 
     public String getFName() {
@@ -63,10 +58,6 @@ public class Student extends Person{
 
     public int getPhoneNo() {
         return phoneNo;
-    }
-
-    public School getSchool() {
-        return school;
     }
 
     public String getAdress() {

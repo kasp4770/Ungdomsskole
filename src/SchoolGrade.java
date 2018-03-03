@@ -1,4 +1,4 @@
-public enum SchoolGrade { sixth("6th grade"), seventh("7th grade"), eighth("8th grade"), ninth("9th grade"), tenth("10th");
+public enum SchoolGrade { sixth("6. Klasse"), seventh("7. Klasse"), eighth("8. Klasse"), ninth("9. Klasse"), tenth("10. Klasse");
 
     private String grade;
 
