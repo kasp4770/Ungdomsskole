@@ -23,8 +23,10 @@ public class Student extends Person{
         this.adress = adress;
         this.username = username;
         this.password = password;
-
         setRole(PersonType.STUDENT);
+        /*if (getAge() < 13 || getAge() > 18) {
+            throw new IllegalArgumentException("The student is either too old or too young to apply.");
+        }*/
     }
 
     public String getFName() {

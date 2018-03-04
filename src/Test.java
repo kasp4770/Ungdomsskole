@@ -6,9 +6,9 @@ public class Test {
 
         PersonDAO List = new PersonDAO();
 
-        Person person1 = new Student(/*0,*/"lala", "lala", LocalDate.of(1991,5,2),
+        Person person1 = new Student(/*0,*/"lala", "lala", LocalDate.of(2004,5,2),
                 61408507, School.lille_nastved, SchoolGrade.tenth,"Ejlersvej 44", "lala", "lala");
-        Person person2 = new Student(/*1,*/"Whala", "Hula", LocalDate.of(2005, 12, 2),
+        Person person2 = new Student(/*1,*/"Whala", "Hula", LocalDate.of(2002, 12, 2),
                 58963257, School.ellebaeksskolen, SchoolGrade.seventh,"Kildemarksvej 188",  "barekoman", "fuckdig");
         Person person3 = new Student(/*2,*/ "Halløj", "Med dig", LocalDate.of(2003, 8, 17),
                 69825869, School.kalbyrisskolen, SchoolGrade.ninth, "Fagotvej 5", "vildunoget?", "såKom!");
@@ -35,5 +35,17 @@ public class Test {
 
         System.out.println("\n" + person4.getBirthDate() + " " + person4.getAge());
         System.out.println(person5.getBirthDate() + " " + person5.getAge());
+
+        Course course1 = new Course(CourseType.FRENCH, 2, Classroom.CLASSROOM1);
+
+        course1.addPerson(person1);
+        course1.addPerson(person2);
+        course1.addPerson(person3);
+
+        System.out.println(course1.getAllPersons());
+        course1.setFaculty(person5);
+        System.out.println(course1.getFaculty().getFName());
+        course1.setFaculty(person4);
+        System.out.println(course1.getFaculty().getFName());
     }
 }
