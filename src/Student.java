@@ -71,6 +71,10 @@ public class Student extends Person{
         return school;
     }
 
+    public SchoolGrade getGrade() {
+        return grade;
+    }
+
     public String getAdress() {
         return adress;
     }
