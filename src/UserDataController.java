@@ -14,20 +14,20 @@ public class UserDataController implements Initializable {
     public void initData(Person person) {
         selectedPerson = person;
         if (selectedPerson instanceof Student) {
-            lblFName.setText(selectedPerson.getFName());
-            lblLName.setText(selectedPerson.getLName());
+            lblFName.setText(selectedPerson.getfName());
+            lblLName.setText(selectedPerson.getlName());
             lblBirthdate.setText(selectedPerson.getBirthDate().format(formatter));
-            lblAdress.setText(selectedPerson.getAdress());
+            lblAdress.setText(selectedPerson.getAddress());
             lblPhoneNo.setText(Integer.toString(selectedPerson.getPhoneNo()));
             lblSchool.setText(((Student) selectedPerson).getSchool().schoolString());
             lblSchoolGrade.setText(((Student) selectedPerson).getGrade().gradeString());
             lblUsername.setText(selectedPerson.getUsername());
             lblPassword.setText(selectedPerson.getPassword());
         }else if (selectedPerson instanceof Faculty) {
-            lblFName.setText(selectedPerson.getFName());
-            lblLName.setText(selectedPerson.getLName());
+            lblFName.setText(selectedPerson.getfName());
+            lblLName.setText(selectedPerson.getlName());
             lblBirthdate.setText(selectedPerson.getBirthDate().format(formatter));
-            lblAdress.setText(selectedPerson.getAdress());
+            lblAdress.setText(selectedPerson.getAddress());
             lblPhoneNo.setText(Integer.toString(selectedPerson.getPhoneNo()));
             lblSchool.setText("");
             lblSchoolGrade.setText("");

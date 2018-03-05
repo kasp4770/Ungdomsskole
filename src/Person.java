@@ -18,7 +18,7 @@ public abstract class Person {
     private int phoneNo;
     private School school;
     private SchoolGrade grade;
-    private String adress;
+    private String address;
     private String username;
     private String password;
 
@@ -41,8 +41,8 @@ public abstract class Person {
     /**
      * @return Returns a String of the role type
      */
-    public String getRole(){
-        return type.roleString();
+    public PersonType getRole(){
+        return type;
     }
 
     /**
@@ -113,21 +113,49 @@ public abstract class Person {
         }
         return age;
     }
+    
+    public int getPhoneNo() {
+        return phoneNo;
+    }
 
     public void setPhoneNo(int phoneNo) {
         this.phoneNo = phoneNo;
     }
-    public abstract SchoolGrade getGrade();
-    public abstract void setGrade(SchoolGrade grade);
-    public abstract School getSchool();
-    public abstract void setSchool(School school);
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public SchoolGrade getGrade(){
+        return grade;
+    }
+
+    public void setGrade(SchoolGrade grade){
+        this.grade = grade;
+    }
+
+    public School getSchool(){
+        return school;
+    }
+
+    public void setSchool(School school){
+        this.school = school;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getUsername() {
+        return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
