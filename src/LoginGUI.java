@@ -13,7 +13,7 @@ import javafx.scene.layout.StackPane;
 
 import java.time.LocalDate;
 
-public class Main extends Application implements EventHandler<ActionEvent>{
+public class LoginGUI extends Application implements EventHandler<ActionEvent>{
 
     private TextField userNameField, passwordField;
     private Label userNameLbl, passwordLbl;
