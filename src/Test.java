@@ -30,7 +30,7 @@ public class Test {
 
         System.out.println(List.getAllPersons());
 
-        System.out.println("Navn: " + person1.getFName() + person1.getLName() + "\n" +
+        System.out.println("Navn: " + person1.getfName() + person1.getlName() + "\n" +
                 "Fødselsdag: " + person1.getBirthDate() + "\n");
 
         System.out.println("\n" + person4.getBirthDate() + " " + person4.getAge());
@@ -44,8 +44,8 @@ public class Test {
 
         System.out.println(course1.getAllPersons());
         course1.setFaculty(person5);
-        System.out.println(course1.getFaculty().getFName());
+        System.out.println(course1.getFaculty().getfName());
         course1.setFaculty(person4);
-        System.out.println(course1.getFaculty().getFName());
+        System.out.println(course1.getFaculty().getfName());
     }
 }

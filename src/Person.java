@@ -12,6 +12,16 @@ public abstract class Person {
     private int rollNo;
     private PersonType type;
 
+    private String fName;
+    private String lName;
+    private LocalDate birthDate;
+    private int phoneNo;
+    private School school;
+    private SchoolGrade grade;
+    private String adress;
+    private String username;
+    private String password;
+
     /**
      * Default constructor - Add's its objects to an ArrayList of PersonDAO.java and counts 1+ for each time
      * **/
@@ -54,28 +64,74 @@ public abstract class Person {
         return PersonDAO.persons.indexOf(this);
     }
 
-    /**
-     * @return the fName/front name
-     */
-    public abstract String getFName();
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
 
-    /**
-     * @return the lName/last name
-     */
-    public abstract String getLName();
+    public String getfName() {
+        return fName;
+    }
 
-    /**
-     * @return the birthdate
-     */
-    public abstract LocalDate getBirthDate();
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
 
-    public abstract int getAge();
+    public String getlName() {
+        return lName;
+    }
 
-    public abstract int getPhoneNo();
+    public void setlName(String lName) {
+        this.lName = lName;
+    }
 
-    public abstract String getAdress();
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
 
-    public abstract String getUsername();
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
 
-    public abstract String getPassword();
+    public int getAge(){
+        LocalDate now = LocalDate.now();
+        LocalDate birth = birthDate;
+
+        int year1 = now.getYear();
+        int year2 = birth.getYear();
+        int age = year1 - year2;
+
+        int month1 = now.getMonthValue();
+        int month2 = birth.getMonthValue();
+        if(month2 > month1){ age--;
+        }
+        else if(month1 == month2){
+            int day1 = now.getDayOfMonth();
+            int day2 = birth.getDayOfMonth();
+            if(day2 > day1){
+                age--;
+            }
+        }
+        return age;
+    }
+
+    public void setPhoneNo(int phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+    public abstract SchoolGrade getGrade();
+    public abstract void setGrade(SchoolGrade grade);
+    public abstract School getSchool();
+    public abstract void setSchool(School school);
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
+
