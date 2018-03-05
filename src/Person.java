@@ -113,7 +113,7 @@ public abstract class Person {
         }
         return age;
     }
-    
+
     public int getPhoneNo() {
         return phoneNo;
     }
