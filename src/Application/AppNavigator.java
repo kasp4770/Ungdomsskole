@@ -1,9 +1,9 @@
-import javafx.fxml.FXMLLoader;
+package Application;
 
 public class AppNavigator {
 
-    public static final String MAIN = "MainScreen.fxml";
-    public static final String USER_DATA = "UserDataScreen.fxml";
+    public static final String MAIN = "Application/MainScreen.fxml";
+    public static final String USER_DATA = "Application/UserDataScreen.fxml";
 
     private static MainScreenController mainScreenController;
 
